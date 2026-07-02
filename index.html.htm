@@ -3,282 +3,377 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>REIAZ Personal Web Page</title>
+<title>Personal web Page</title>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <style>
-
     *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-    overflow-x:hidden;
+    background:#f6f5f2;
+    color:#111;
 }
 
-/* TOP BAR */
-
-.top-bar{
-    background:#07254f;
-    color:white;
-    height:50px;
+.navbar{
     display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.top-content{
-    width:90%;
-    display:flex;
-    justify-content:center;
-    gap:30px;
-}
-
-.social i{
-    margin:0 6px;
-}
-
-/* NAVBAR */
-
-nav{
-    height:90px;
-    background:white;
-    display:flex;
-    align-items:center;
     justify-content:space-between;
-    padding:0 70px;
+    align-items:center;
+    padding:25px 8%;
+    background:#fff;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.circle{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    border:10px solid #0088ff;
-    position:relative;
-}
-
-.circle::after{
-    content:"";
-    width:18px;
-    height:18px;
-    background:#111;
-    border-radius:50%;
-    position:absolute;
-    top:9px;
-    left:9px;
-}
-
-.logo h2{
-    color:#0088ff;
-}
-
-.logo h3{
-    color:#111;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:40px;
-}
-
-nav a{
-    text-decoration:none;
-    color:#111;
+    font-size:22px;
     font-weight:700;
 }
 
-.search{
-    width:55px;
-    height:55px;
-    background:#0a88ff;
-    color:white;
+.nav-links{
     display:flex;
-    align-items:center;
-    justify-content:center;
+    list-style:none;
+    gap:30px;
 }
 
-/* HERO */
-
-.hero{
-    display:flex;
-    height:calc(100vh - 140px);
-}
-
-.left-side{
-    width:65%;
-    background:linear-gradient(135deg,#06162f,#0b2b58);
-    color:white;
-    position:relative;
-    display:flex;
-    align-items:center;
-}
-
-.content{
-    width:600px;
-    margin-left:170px;
-}
-
-.content h1{
-    font-size:65px;
-    font-weight:800;
-}
-
-.content h2{
-    font-size:35px;
-    margin-top:10px;
-}
-
-.content span{
-    color:#0b8cff;
-}
-
-.content p{
-    margin-top:25px;
-    color:#d0d0d0;
-    line-height:1.5;
-    font-size:18px;
-}
-
-.buttons{
-    margin-top:40px;
-}
-
-.purchase,
-.readmore{
+.nav-links a{
     text-decoration:none;
-    padding:16px 35px;
-    display:inline-block;
-    margin-right:15px;
-    font-weight:bold;
-}
-
-.purchase{
-    background:#0b8cff;
-    color:white;
-}
-
-.readmore{
-    border:2px solid #0b8cff;
-    color:#0b8cff;
-}
-
-.arrows{
-    position:absolute;
-    left:50px;
-    top:50%;
-    transform:translateY(-50%);
+    color:#333;
 }
 
 .btn{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    background:white;
-    color:#0b8cff;
+    background:#111;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:50px;
+    display:inline-block;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:60px 8%;
+    background:linear-gradient(
+    135deg,#7d7267,#b5a999);
+    color:#fff;
+}
+
+.hero-content{
+    flex:1;
+}
+
+.tag{
+    display:inline-block;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:68px;
+    line-height:1.1;
+    margin-bottom:20px;
+    max-width:600px;
+}
+
+.hero p{
+    max-width:500px;
+    margin-bottom:30px;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:500px;
+    border-radius:20px;
+}
+
+.brands{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.brand-list{
     display:flex;
     justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.about{
+    padding:100px 8%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
     align-items:center;
+}
+
+.about h2{
+    font-size:42px;
     margin:20px 0;
-    font-size:20px;
 }
 
-/* RIGHT IMAGE */
-
-.right-side{
-    width:35%;
-    overflow:hidden;
+.about p{
+    margin-bottom:25px;
+    color:#555;
 }
 
-.right-side img{
+.about-image img{
     width:100%;
-    height:100%;
-    object-fit:cover;
+    border-radius:20px;
+}
+
+.features{
+    background:#1f1f24;
+    color:white;
+    padding:100px 8%;
+}
+
+.features h2{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.card{
+    background:#2d2d35;
+    padding:30px;
+    border-radius:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.testimonials{
+    padding:100px 8%;
+}
+
+.testimonials h2{
+    margin-bottom:40px;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.testimonial{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.cta{
+    background:linear-gradient(
+    135deg,#8f8477,#c0b4a6);
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:25px;
+}
+
+footer{
+    padding:80px 8%;
+    text-align:center;
+}
+
+footer h2{
+    font-size:48px;
+    margin-bottom:30px;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.footer-links a{
+    color:#555;
+    text-decoration:none;
+}
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    gap:40px;
+}
+
+.hero h1{
+    font-size:48px;
+}
+
+.about{
+    grid-template-columns:1fr;
+}
+
+.feature-grid,
+.testimonial-grid{
+    grid-template-columns:1fr;
+}
+
+.nav-links{
+    display:none;
+}
+
+footer h2{
+    font-size:32px;
+}
 }
 </style>
 <body>
 
-<!-- Top Bar -->
-<div class="top-bar">
-    <div class="top-content">
-        <span><i class="fa-regular fa-envelope"></i> reiaz0096@gmail.com</span>
-        <span><i class="fa-solid fa-phone"></i> +088 01731-211651</span>
-        <div class="social">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-google-plus-g"></i>
-            <i class="fab fa-linkedin-in"></i>
-            <i class="fab fa-twitter"></i>
-        </div>
-    </div>
-</div>
+<header>
+    <nav class="navbar">
+        <div class="logo">R Ei Az</div>
 
-<!-- Navbar -->
-<nav>
-    <div class="logo">
-        <div class="circle"></div>
-        <div>
-            <h2>Reiaz</h2>
-            <h3>BUSINESS</h3>
-        </div>
-    </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
 
-    <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT US</a></li>
-        <li><a href="#">PAGES</a></li>
-        <li><a href="#">PORTFOLIO</a></li>
-        <li><a href="#">BLOG</a></li>
-        <li><a href="#">CONTACT</a></li>
-    </ul>
+        <a href="#" class="btn">Book a Free Call</a>
+    </nav>
+</header>
 
-    <div class="search">
-        <i class="fa fa-search"></i>
-    </div>
-</nav>
-
-<!-- Hero Section -->
 <section class="hero">
+    <div class="hero-content">
+        <span class="tag">Career Coaching</span>
 
-    <div class="left-side">
-        <div class="arrows">
-            <div class="btn"><i class="fa fa-chevron-left"></i></div>
-            <div class="btn"><i class="fa fa-chevron-right"></i></div>
-        </div>
+        <h1>Unlock the Career You Deserve</h1>
 
-        <div class="content">
-            <h1>GIVE YOU THE <span>BEST</span></h1>
-            <h2><span>BUSINESS</span> SOLUTIONS</h2>
+        <p>
+            Struggling to land your dream job or switch careers?
+            I help professionals win interviews and build confidence.
+        </p>
 
-            <p>
-                Come and listen to a story about a man named jed a poor
-                mountaineer barely kept his family fed all of them had hair
-                of gold like their mother the youngest one.
-            </p>
-
-            <div class="buttons">
-                <a href="#" class="purchase">PURCHASE</a>
-                <a href="#" class="readmore">READ MORE</a>
-            </div>
-        </div>
+        <a href="#" class="btn">Read My Full Story</a>
     </div>
 
-    <div class="right-side">
-        <img src="/reiaz/index.html/img/reiaz.jpeg" alt="Business man">
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900" alt="">
     </div>
-
 </section>
 
+<section class="brands">
+    <p>YOU MAY HAVE SEEN ME IN</p>
+    <div class="brand-list">
+        <span>Notion</span>
+        <span>Mailchimp</span>
+        <span>Airtable</span>
+        <span>Gumroad</span>
+    </div>
+</section>
+
+<section class="about">
+    <div class="about-text">
+        <small>+ About Me</small>
+
+        <h2>I'm Your Career Growth Partner for Clarity, Confidence, and Results</h2>
+
+        <p>
+            With over 12 years of experience helping professionals
+            land jobs at top companies, I specialize in career clarity,
+            job search strategy, resume optimization and interview mastery.
+        </p>
+
+        <a href="#" class="btn">More About Me</a>
+    </div>
+
+    <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=700" alt="">
+    </div>
+</section>
+
+<section class="features">
+    <h2>What You'll Get From Career Coaching</h2>
+
+    <div class="feature-grid">
+        <div class="card">
+            <h3>Career Clarity</h3>
+            <p>Discover your strengths and ideal career path.</p>
+        </div>
+
+        <div class="card">
+            <h3>Resume Optimization</h3>
+            <p>Create a resume that gets interviews.</p>
+        </div>
+
+        <div class="card">
+            <h3>Interview Preparation</h3>
+            <p>Build confidence and answer effectively.</p>
+        </div>
+
+        <div class="card">
+            <h3>Job Search Strategy</h3>
+            <p>Apply smarter and get more opportunities.</p>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2>Real Results From Real People</h2>
+
+    <div class="testimonial-grid">
+        <div class="testimonial">
+            <p>
+                "I received 3 interviews and secured a higher-paying role within 6 weeks."
+            </p>
+            <h4>- Sarah</h4>
+        </div>
+
+        <div class="testimonial">
+            <p>
+                "The coaching completely changed my approach and confidence."
+            </p>
+            <h4>- James</h4>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Ready to Write Your Own Success Story?</h2>
+    <a href="#" class="btn">Book Your Free Strategy Call</a>
+</section>
+
+<footer>
+    <h2>reiaz0096@gmail.com</h2>
+
+    <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Testimonials</a>
+        <a href="#">Contact</a>
+    </div>
+</footer>
+
 </body>
-    foo
 </html>
